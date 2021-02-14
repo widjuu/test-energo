@@ -26,7 +26,6 @@ export const sendUsers = async (users) => {
       "Content-Type": "application/json",
     },
   });
-  console.log(resp.status);
 
   const data = await resp.json();
 
