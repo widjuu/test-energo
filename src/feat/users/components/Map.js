@@ -38,7 +38,7 @@ export const Map = () => {
     <MapContainer
       center={[0, 0]}
       zoom={1}
-      scrollWheelZoom={false}
+      scrollWheelZoom
       className={classes.leaflet}
     >
       <TileLayer
