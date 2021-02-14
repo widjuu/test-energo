@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/test-energo/static/js/main.c4cb1df6.chunk.js",
+    "main.js.map": "/test-energo/static/js/main.c4cb1df6.chunk.js.map",
+    "runtime-main.js": "/test-energo/static/js/runtime-main.3816b20b.js",
+    "runtime-main.js.map": "/test-energo/static/js/runtime-main.3816b20b.js.map",
+    "static/js/2.e5f35b15.chunk.js": "/test-energo/static/js/2.e5f35b15.chunk.js",
+    "static/js/2.e5f35b15.chunk.js.map": "/test-energo/static/js/2.e5f35b15.chunk.js.map",
+    "static/js/3.281e642e.chunk.js": "/test-energo/static/js/3.281e642e.chunk.js",
+    "static/js/3.281e642e.chunk.js.map": "/test-energo/static/js/3.281e642e.chunk.js.map",
+    "index.html": "/test-energo/index.html",
+    "static/js/2.e5f35b15.chunk.js.LICENSE.txt": "/test-energo/static/js/2.e5f35b15.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3816b20b.js",
+    "static/js/2.e5f35b15.chunk.js",
+    "static/js/main.c4cb1df6.chunk.js"
+  ]
+}
