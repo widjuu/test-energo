@@ -1,8 +1,10 @@
 ### Для локальной разработки необходимо создать файл env.development.local в корне проекта с параметрами:
 
+```
 REACT_APP_SECRET_AUTH_TOKEN=<token>
 REACT_APP_USERS_URL=https://jsonplaceholder.typicode.com/users
 REACT_APP_USERS_SEND_URL=https://httpbin.org/post
+```
 
 Стек: React, Redux
 
