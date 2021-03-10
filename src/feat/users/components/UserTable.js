@@ -45,8 +45,6 @@ export const UserTable = () => {
     },
   };
 
-  console.log(selectedUsers);
-
   return (
     <div>
       <Table

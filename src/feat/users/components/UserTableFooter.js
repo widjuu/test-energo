@@ -22,7 +22,7 @@ export const UserTableFooter = () => {
       <Button
         type="primary"
         shape="round"
-        icon={loading ? <Spin size="large" /> : undefined}
+        icon={loading ? <Spin size="small" /> : undefined}
         onClick={onButtonClick}
         disabled={disabled}
         color={error ? "secondary" : "primary"}
