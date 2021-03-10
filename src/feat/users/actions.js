@@ -24,7 +24,7 @@ export const sendSelectedUsers = createAsyncThunk(
 
       return {
         id: user.id,
-        zipcode: user.zipcode,
+        zipcode: user.address.zipcode,
       };
     });
 

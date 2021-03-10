@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 export const Map = () => {
   const selectedUsers = useSelector((state) => state.selectedUsers.selected);
 
-  console.log(selectedUsers);
+  // console.log(selectedUsers);
 
   const markers = Object.keys(selectedUsers).map((userId) => {
     const user = selectedUsers[userId];
@@ -24,7 +24,7 @@ export const Map = () => {
     );
   });
 
-  console.log(markers);
+  //console.log(selectedUsers);
 
   return (
     <MapContainer

@@ -28,7 +28,7 @@ export const UserTable = () => {
       name: userId?.name,
       key: userId?.id,
       phone: userId?.phone,
-      zipcode: userId?.address?.zipcode,
+      address: userId?.address,
     };
   });
 
@@ -41,9 +41,17 @@ export const UserTable = () => {
   const rowSelection = {
     selectedRowKeys,
     onSelect(record) {
-      dispatch(toggleUser({ id: record.id, zipcode: record.zipcode }));
+      dispatch(
+        toggleUser({
+          id: record.id,
+          zipcode: record.zipcode,
+          address: record.address,
+        })
+      );
     },
   };
+
+  console.log(data);
 
   return (
     <div>
