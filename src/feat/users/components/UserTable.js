@@ -51,8 +51,6 @@ export const UserTable = () => {
     },
   };
 
-  console.log(data);
-
   return (
     <div>
       <Table
