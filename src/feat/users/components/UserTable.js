@@ -1,44 +1,61 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 //components
-import { makeStyles } from "@material-ui/core/styles";
+import { Table } from "antd";
 
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableContainer from "@material-ui/core/TableContainer";
-import Paper from "@material-ui/core/Paper";
+//utils
+import { toggleUser } from "../actions";
 
-import { UserTableRow } from "./UserTableRow";
-import { UserTableHeader } from "./UserTableHeader";
-import { UserTableFooter } from "./UserTableFooter";
-
-const useStyles = makeStyles(({ breakpoints }) => ({
-  table: {
-    margin: "10px",
-    width: "500px",
-    [breakpoints.down("sm")]: {
-      width: "100%",
-    },
+const columns = [
+  {
+    title: "Имя",
+    dataIndex: "name",
   },
-}));
+  {
+    title: "Телефон",
+    dataIndex: "phone",
+  },
+];
 
 export const UserTable = () => {
-  const classes = useStyles();
+  const dispatch = useDispatch();
   const data = useSelector((state) => state.users.data);
+  const selectedUsers = useSelector((state) => state.selectedUsers.selected);
+
+  const dataSource = data.map((userId) => {
+    return {
+      id: userId?.id,
+      name: userId?.name,
+      key: userId?.id,
+      phone: userId?.phone,
+      zipcode: userId?.address?.zipcode,
+    };
+  });
+
+  const selectedRowKeys = Object.keys(selectedUsers).map((userId) => {
+    const user = selectedUsers[userId];
+
+    return user.id;
+  });
+
+  const rowSelection = {
+    selectedRowKeys,
+    onSelect(record) {
+      dispatch(toggleUser({ id: record.id, zipcode: record.zipcode }));
+    },
+  };
+
+  console.log(selectedUsers);
 
   return (
-    <Paper>
-      <TableContainer className={classes.table}>
-        <Table size="small">
-          <UserTableHeader />
-          <TableBody>
-            {data.map((row) => (
-              <UserTableRow key={row.id} {...row} />
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <UserTableFooter />
-    </Paper>
+    <div>
+      <Table
+        size="small"
+        pagination={false}
+        columns={columns}
+        dataSource={dataSource}
+        rowSelection={rowSelection}
+      />
+    </div>
   );
 };

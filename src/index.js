@@ -2,9 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
+import "antd/dist/antd.css";
+import "./css/style.css";
+
 // components
 import { App } from "./App";
-import CssBaseline from "@material-ui/core/CssBaseline";
 
 // utils
 import store from "./lib/store";
@@ -13,7 +15,6 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <>
-      <CssBaseline />
       <Provider store={store}>
         <App />
       </Provider>

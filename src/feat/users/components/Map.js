@@ -1,20 +1,8 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useSelector } from "react-redux";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles(({ breakpoints }) => ({
-  leaflet: {
-    width: "100%",
-    height: 400,
-    [breakpoints.down("sm")]: {
-      height: 300,
-    },
-  },
-}));
 
 export const Map = () => {
   const selectedUsers = useSelector((state) => state.selectedUsers.selected);
-  const classes = useStyles();
 
   const markers = Object.keys(selectedUsers).map((userId) => {
     const user = selectedUsers[userId];
@@ -39,7 +27,7 @@ export const Map = () => {
       center={[0, 0]}
       zoom={1}
       scrollWheelZoom={false}
-      className={classes.leaflet}
+      className="leaflet"
     >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
