@@ -32,14 +32,12 @@ export const App = () => {
   }
 
   return (
-    <>
-      <div>
-        <UserTable />
-        <UserTableFooter />
-        <div style={{ flexGrow: 1 }}>
-          <Map />
-        </div>
+    <div>
+      <UserTable />
+      <UserTableFooter />
+      <div style={{ flexGrow: 1 }}>
+        <Map />
       </div>
-    </>
+    </div>
   );
 };

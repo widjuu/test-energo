@@ -24,8 +24,6 @@ export const Map = () => {
     );
   });
 
-  //console.log(selectedUsers);
-
   return (
     <MapContainer
       center={[0, 0]}
