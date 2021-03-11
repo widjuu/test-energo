@@ -1,4 +1,5 @@
 import React from "react";
+import renderer from "react-test-renderer";
 import { render, unmountComponentAtNode } from "react-dom";
 
 import { act } from "react-dom/test-utils";
@@ -30,4 +31,17 @@ it("test button", () => {
   });
   expect(container.querySelector("Button").disabled).toBeDefined();
   expect(container.textContent).toBe("Отправить");
+});
+
+describe("UserTableFooter Snapshot", () => {
+  it("+++capturing UserTableFooter Snapshot", () => {
+    const renderedValue = renderer
+      .create(
+        <Provider store={store}>
+          <UserTableFooter />
+        </Provider>
+      )
+      .toJSON();
+    expect(renderedValue).toMatchSnapshot();
+  });
 });

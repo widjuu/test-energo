@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserTableFooter Snapshot +++capturing UserTableFooter Snapshot 1`] = `
+<div
+  className="user-table-footer"
+>
+  <button
+    className="ant-btn ant-btn-primary ant-btn-round"
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+    type="button"
+  >
+    <span>
+      Отправить
+    </span>
+  </button>
+</div>
+`;

@@ -3,14 +3,14 @@ import renderer from "react-test-renderer";
 
 import { Provider } from "react-redux";
 import store from "../lib/store";
-import { UserTable } from "../feat/users/components/UserTable";
+import { Map } from "../feat/users/components/Map";
 
-describe("User Table Snapshot", () => {
-  it("+++capturing User Table Snapshot", () => {
+describe("Map Snapshot", () => {
+  it("+++capturing Map Snapshot", () => {
     const renderedValue = renderer
       .create(
         <Provider store={store}>
-          <UserTable />
+          <Map />
         </Provider>
       )
       .toJSON();
